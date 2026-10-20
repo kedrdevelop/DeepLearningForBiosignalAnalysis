@@ -1,0 +1,13 @@
+# Specify the name you give to the environment
+name: dl4biosig
+# Specify where conda will look for packages
+channels:
+  - conda-forge
+# Packages installed at the creation of the environment:
+# Python from conda, everything else (including PyTorch) from pip,
+# using the requirements.txt at the root of the course folder
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      - -r ../requirements.txt

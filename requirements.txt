@@ -1,0 +1,31 @@
+# Environment for running the PyTorch tutorials locally (Python >= 3.10)
+#
+#   python -m venv .venv
+#   .venv\Scripts\activate          (Windows)   |   source .venv/bin/activate   (Linux/macOS)
+#   pip install -r requirements.txt
+#
+# GPU (NVIDIA, Windows/Linux): the default `torch` wheel on Windows is CPU-only.
+# Install the CUDA build first, then the rest of this file, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+#   pip install -r requirements.txt
+
+# Deep learning
+torch>=2.4
+
+# Scientific stack
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+
+# Biosignal data access
+wfdb>=4.1
+h5py>=3.10
+
+# Notebooks (VSCode / Jupyter)
+ipykernel
+nbformat>=5.9
+
+# Repo tooling: strips notebook outputs at commit time (run `nbstripout --install` once)
+nbstripout
